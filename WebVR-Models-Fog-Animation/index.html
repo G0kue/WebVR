@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <!-- Production Version, Minified -->
+        <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+  </head>
+  S
+  <body>
+ <!-- <a-scene fog="type: exponential; color: purple; far: 60; near: 0" stats> -->
+
+  <a-scene stats>
+    
+          <a-assets>
+                <a-asset-item id="object" src="Raptor_Model/Raptor.obj"></a-asset-item>
+                <a-asset-item id="material" src="Raptor_Model/Raptor.mtl"></a-asset-item>
+
+                <a-asset-item id="object1" src="Landscape/aztec-temple.obj"></a-asset-item>
+                <a-asset-item id="material1" src="Landscape/aztec-temple.mtl"></a-asset-item>
+
+
+          </a-assets>
+
+         
+     
+     <!-- Using the asset management system. -->
+          <a-obj-model src="#object" mtl="#material"
+                              position="0 0 -12"
+                              rotation="0 90 0"
+                              scale= "0.1 0.1 0.1"></a-obj-model>
+
+                              
+                              <a-obj-model src="#object" mtl="#material"
+                              position="4 0 -20"
+                              rotation="0 90 0"
+                              scale= "0.1 0.1 0.1"></a-obj-model>
+
+                              <a-obj-model src="#object" mtl="#material"
+                              position="-4 0 -18"
+                              rotation="0 90 0"
+                              scale= "0.1 0.1 0.1"></a-obj-model>
+
+                              
+
+                              <a-obj-model src="#object1" mtl="#material1"
+                              position="0 0 0"
+                              rotation="0 0 0"
+                              scale= ".8 .8 .8"></a-obj-model> 
+
+
+                              <a-sky src="SkyBox/sky2.png" ></a-sky>
+
+                              <a-box color="#FFFFFF" width="1" height="1" depth="1"
+                                position="2 20 0"
+                                rotation="45 45 45"
+                                scale="1 2.5 1"
+                                src="#texture">
+                              <a-animation attribute="rotation" repeat="indefinite" to="0 360 0"></a-animation>
+                                </a-box>
+
+
+                                <a-entity bmfont-text="text: Hello, A-Frame!; color: #BBB" position="2 40 -3"
+                                scale="20 20 20"></a-entity>
+
+           <a-entity position="0 33 36">
+                <a-camera></a-camera>
+           </a-entity>
+    </a-scene>
+  </body>
+</html>
